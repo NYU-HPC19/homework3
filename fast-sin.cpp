@@ -67,7 +67,7 @@ void sin4_intrin(double* sinx, const double* x) {
     x2  = _mm_mul_pd(x1, x1);
     x3  = _mm_mul_pd(x1, x2);
 
-    __m128 s = x1;
+    __m128d s = x1;
     s = _mm_add_pd(s, _mm_mul_pd(x3 , _mm_set1_pd(c3 )));
     _mm_store_pd(sinx+i, s);
   }
